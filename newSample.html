@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .label{
+            display: flex;
+            /* justify-content: space-around; */
+            cursor: pointer;
+            color: #77f;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 2rem;
+            appearance: none;
+            user-select: none;
+            margin: 2rem;
+        }
+
+        .radio{
+            appearance: none;
+        }
+
+        .new-radio{
+            content: "";
+            display: block;
+            width: 2rem;
+            height: 2rem;
+            border: 2px solid #b7b7b7;
+            background-color: #f7f7f7;
+            border-radius: 2rem;
+
+        }
+
+        .radio:focus ~ .new-radio::before{
+            content: "";
+            display: block;
+            width: 1.25rem;
+            height: 1.25rem;
+            margin-left: 0.4rem;
+            margin-top: 0.4rem;
+            background-color: #77f;
+            border-radius: 2rem;
+        }
+
+        .text{
+            margin-left: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <label class="label">
+        <input type="radio" name="input" class="radio">
+        <span class="new-radio"></span>
+        <span class="text"> Click me</span>
+    </label>
+    <label class="label">
+        <input type="radio" name="input" class="radio">
+        <span class="new-radio"></span>
+        <span class="text"> Click me too</span>
+    </label>
+    <label class="label">
+        <input type="radio" name="input" class="radio">
+        <span class="new-radio"></span>
+        <span class="text"> Click me please</span>
+    </label>
+</body>
+</html>

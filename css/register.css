@@ -1,13 +1,71 @@
 .checker-label{
+    display: flex;
+    /* color: #77f; */
+    /* font-weight: bold; */
+
     font-size: 1rem;
     font-family: sans-serif;
-    display: block;
     margin-bottom: 2rem;
     cursor: pointer;
     user-select: none;
+}
+.checker-label input{
+    appearance: none;
+}
+
+.new-check{
+    content: "";
+    visibility: none;
+    width: 0.75rem;
+    height: 0.75rem;
+    border: 0.125rem solid #b7b7b7;
+    background-color: #f7f7f7;
+}
+.newer-check{
+    display: none;
+}
+.fa-check-square{
+    all: unset;
+    color: #ff3344;
+}
+
+.fa-check-circle{
+    all: unset;
+    color: #77f;
+}
+
+.checker-label input:checked ~ .new-check{
+    /* border: none; */
+    display: none;
+    width: 0.875rem;
+    height: 0.875rem;
+    background-color: #f7f7f7;
+}
+
+.checker-label input:checked ~ .newer-check{
+    display: block;
+}
+
+.checker-label input:checked ~ .new-check::before{
+    display: none;
+    content: "\2714";
+    display: block;
+    /* width: 0.5rem;
+    height: 0.5rem; */
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: 0rem;
+    margin-top: -0.2rem;
+    color: tomato;
 }
 
 .checker-label a{
     text-decoration: none;
     color: #77f;
+}
+
+.checker-label .text{
+    display: block;
+    margin-left: 0.5rem;
+    font-size: 1rem;
 }

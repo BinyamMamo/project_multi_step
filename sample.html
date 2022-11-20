@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>sample html</title>
+        <style>
+            *{
+                /* --locus: 0rem; */
+            }
+            .container{
+                --locus: 0rem;
+                display: flex;
+                width: 10rem;
+                height: 2.5rem;
+                background-color: #bbb;
+                border-radius: 2rem;
+                /* z-index: 1; */
+                cursor: pointer;
+            }
+            .one, .two{
+                display: block;
+                width: 4rem;
+                text-align: center;
+                padding: 0.5rem;
+                font-size: 1.25rem;
+                z-index: 1;
+            }
+
+            .container::before{
+                transition: 1s;
+                content: "";
+                color: red;
+                position: absolute;
+                z-index: 0;
+                margin-left: var(--locus);
+                margin-top: 0rem;
+                /* top: -0.25rem; */
+                width: 5.5rem;
+                height: 2.5rem;
+                border-radius: 2rem;
+                background-image: linear-gradient(to right, #63ff47, #7777ff);
+            }
+            .two{
+                background-image: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="one" onclick="one(this.parentElement)">one</div>
+            <div class="two" onclick="two(this.parentElement)">two</div>
+        </div>
+
+    </body>
+    <script>
+        function toggle(container){
+            if(container.style.getPropertyValue("--locus") != "5rem")
+                container.style.setProperty("--locus", "5rem");
+            else{
+                container.style.setProperty("--locus", "0rem");
+            }
+        }
+        function one(container){
+            container.style.setProperty("--locus", "0rem");
+        }
+
+        function two(container){
+            container.style.setProperty("--locus", "5rem");
+        }
+        
+    </script>
+</html>
