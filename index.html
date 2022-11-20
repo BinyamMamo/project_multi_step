@@ -3,6 +3,9 @@
 		<title>web</title>
 		<script src="js/script.js"></script>
 		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="css/login.css">
+		<link rel="stylesheet" href="css/register.css">
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
@@ -10,24 +13,37 @@
 	<body>
 		<div class="container">	
 			<div class="btn-container">
-				<button class="btn-one">Login</button>
-				<button class="btn-two">Register</button>
+				<button class="btn-active" onclick="login(this)">Log In</button>
+				<button class="btn-inactive" onclick="register(this)">Register</button>
 			</div>
-			<div class="container-one">
-				<input class="username" type="text">
-				<input class="password" type="password">
-				<input class="checker-box" type="checkbox">
-				<button class="login">Login</button>
-				<a class="forgot">Lost your password?</a>
-				<a class="lack">Don't have account?</a>
+			<div class="icon-container">
+				<i class="fa fa-facebook"></i>
+				<i class="fa fa-twitter"></i>
+				<i class="fa fa-google"></i>
 			</div>
-			<div class="container-two">
-				<input class="username" type="text">
-				<input class="email" type="email">
-				<input class="password" type="password">
-				<input class="checker-box" type="checkbox">
+			<div class="slide-container">
+			<div class="container-one" id="container-one">
+				<input class="username" placeholder="User Name" type="text">
+				<input class="password" placeholder="Enter place holder" type="password">
+				<div class="checker-container">
+					<label class="checker-label">
+						<input class="checker-box" type="checkbox">
+						Remember password
+					</label>
+				</div>
+				<button class="login">Log in</button>
+			</div>
+			<div class="container-two" id="container-two">
+				<input class="username" placeholder="User Name" type="text">
+				<input class="email" placeholder="Email ID" type="email">
+				<input class="password" placeholder="Enter Password" type="password">
+				<label class="checker-label">
+					<input class="checker-box" type="checkbox">
+					I agree to the <a href="">terms & conditions</a>.
+				</label>
 				<button class="register">Register</button>
 			</div>		
+			</div>
 			</div>
 	</body>
 </html>

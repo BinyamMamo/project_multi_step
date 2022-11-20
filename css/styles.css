@@ -5,6 +5,7 @@
 
 body{
   /* background-image:  url("../img/bg.jpg"); */
+  /* background-color: #7777ff; */
   background-size: cover;
   background-position: center;
   background-repeat: repeat;
@@ -12,56 +13,80 @@ body{
 
 .container{
   /* border-radius: 0.75rem; */
-  background: #111;
+  display: block;
+  background: #f7f7f7;
   width: 20rem;
   margin: auto;
-  margin-top: 15vh;
+  margin-top: 10vh;
   padding: 2rem; 
   padding-bottom: 0.75rem;
   overflow: hidden;
 }
 
-.username, .password{
-  width: 20rem;
+.icon-container{
+  width: fit-content;
   margin: auto;
-  color: #7d7d7d;
-  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+.fa{
+  background-image: linear-gradient(to right, #ff3344 , #ffaa44);
+  color: #e5e5e5;
+  padding: 1rem;
+  border-radius: 50px;
+  margin: 0.5rem;
+}
+
+.fa-facebook{
+  padding: 1.055rem 1.25rem;
+}
+
+.slide-container{
+  width: 50rem;
+  display: flex;
+}
+
+.container-one{
+  width: 20rem;
+  display: block;
+  margin-left: 0rem;
+}
+
+.container-two{
+  width: 20rem;
+  display: block;
+  float: left;
+  margin-left: 5rem;
+}
+
+.btn-container{
+  background-color: #e5e5e5;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 2rem;
+  margin: auto;
+  margin-bottom: 1.5rem;
+  /* box-shadow: #ff6347; */
+  /* border: 1px solid #ff6347; */
+}
+
+.btn-active, .btn-inactive{
+  transition: 1s;
+  display: inline;
   font-family: sans-serif;
-  letter-spacing: 0.04rem;
-  margin-bottom: 1.25rem;
-  padding: 0.4rem 1rem;
-  padding-left: 0.5rem;
-  /* width: 8rem; */
-  border-radius: 0.1rem;
+  width: 9rem;
+  padding: 0.75rem 0rem;
+  background-image: linear-gradient(to right, #ff3344 , #ffaa44); 
+  /* 7777dd */
   border: none;
-  border-bottom: 1px solid white;
-  background-color: transparent;
-}
-
-.username:focus, .password:focus{
-  color: #7777dd;
-  border: none;
-  border-bottom: 1px solid white;
-  outline-color: transparent;
-  outline: none;
-}
-
-.login{
-  font-family: monospace;
-  width: 20rem;
-  margin: auto;
-  padding: 0.5rem 0rem;
-  background-color: #7777dd;
-  border: none;
-  font-size: 1.75rem;
-  font-weight: bolder;
+  font-size: 1.15rem;
   color: #f7f7f7;
   letter-spacing: 0.08rem;
   border-radius: 2rem;
-  margin-bottom: 1.25rem;
   cursor: pointer;
 }
 
-.login:hover, .forgot:hover, .lack:hover{
-  opacity: 0.8;
+.btn-inactive{
+  background-color: transparent; 
+  background-image: none;
+  color: #444;
 }

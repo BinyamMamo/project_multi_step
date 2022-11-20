@@ -1,0 +1,64 @@
+.username, .password, .email{
+    width: 20rem;
+    margin: auto;
+    color: #999;
+    font-size: 1rem;
+    font-family: sans-serif;
+    letter-spacing: 0.04rem;
+    margin-bottom: 1.5rem;
+    padding: 0.85rem 0.1rem;
+    padding-left: 0.5rem;
+    /* width: 8rem; */
+    border-radius: 0.1rem;
+    border: none;
+    border-bottom: 1px solid #444;
+    background-color: transparent;
+  }
+  
+  .username:focus, .password:focus, .email:focus{
+    color: #444;
+    border: none;
+    border-bottom: 1px solid #999;
+    outline-color: transparent;
+    outline: none;
+  }
+  
+  .login, .register{
+    font-family: sans-serif;
+    width: 18rem;
+    margin: auto;
+    margin-left: 1rem;
+    padding: 0.5rem 0rem;
+    background-image: linear-gradient(to right, #ff3344 , #ffaa44); 
+    /* 7777dd */
+    border: none;
+    font-size: 1.25rem;
+    color: #f7f7f7;
+    letter-spacing: 0.08rem;
+    border-radius: 2rem;
+    margin-bottom: 1.25rem;
+    cursor: pointer;
+  }
+  
+  .login:hover, .register:hover{
+    background-image: linear-gradient(to left, #ff3344 , #ffaa44); 
+    transition-duration: 5s;
+  }
+
+  .checker-container{
+    width: fit-content;
+    /* margin: auto; */
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+  }
+  .checker-box{
+    margin: 0;
+  }
+
+  .remember{
+    color: #444;
+    font-size: 1rem;
+    font-family: sans-serif;
+    margin-left: 0.25rem;
+  }
+  
