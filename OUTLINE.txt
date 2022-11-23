@@ -1,0 +1,15 @@
+CREATE ACCOUNT
+email
+password
+confirm password
+	NEXT
+SOCIAL LINKS
+medium
+github
+linkedin
+	BACK NEXT
+PERSONAL INFO
+first name
+last name
+mobile no
+	BACK SUBMIT

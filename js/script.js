@@ -1,33 +1,47 @@
-function login(logBtn){
-    var container = logBtn.parentElement;
-    var login = document.getElementById("container-one");
-    var register = document.getElementById("container-two");
-    login.style.marginLeft = "0rem";
-    login.style.transition = "0.75s";
 
-    register.style.marginLeft = "25rem";
-    register.style.transition = "0.75s";
+function next(index){
+    var before = document.getElementById("before");
+    var container = document.getElementById("btn-container");
+    var cont_one = document.getElementById("container-one");
+    // var cont_two = document.getElementById("container-two");
 
-    logBtn.classList.add("btn-active");
-    logBtn.nextElementSibling.classList.add("btn-inactive");
-    logBtn.classList.remove("btn-inactive");
-    logBtn.nextElementSibling.classList.remove("btn-active");
-    container.style.setProperty("--locus", "0rem");
+    if(index == 1){
+        container.style.setProperty("--locus", "8rem");
+        before.style.borderTopLeftRadius = "0rem";
+        before.style.borderTopRightRadius = "0rem";
+        cont_one.style.marginLeft = "-25rem";
+        cont_one.style.transition = "0.75s";
+    }
+
+    if(index == 2){
+        container.style.setProperty("--locus", "16rem");
+        before.style.borderTopLeftRadius = "0rem";
+        before.style.borderTopRightRadius = "0.4rem";
+        cont_one.style.marginLeft = "-50rem";
+        cont_one.style.transition = "0.75s";
+    }
+    
 }
 
-function register(regBtn){
-    var container = regBtn.parentElement;
-    var login = document.getElementById("container-one");
-    var register = document.getElementById("container-two");
-    login.style.marginLeft = "-25rem";
-    login.style.transition = "0.75s";
+function back(index){
+    var before = document.getElementById("before");
+    var container = document.getElementById("btn-container");
+    var cont_one = document.getElementById("container-one");
+    // var cont_two = document.getElementById("container-two");
 
-    register.style.marginLeft = "5rem";
-    register.style.transition = "0.75s";
+    if(index == 1){
+        container.style.setProperty("--locus", "0rem");
+        before.style.borderTopLeftRadius = "0.4rem";
+        before.style.borderTopRightRadius = "0rem";
+        cont_one.style.marginLeft = "0rem";
+        cont_one.style.transition = "0.75s";   
+    }
 
-    regBtn.classList.add("btn-active");
-    regBtn.previousElementSibling.classList.add("btn-inactive");
-    regBtn.classList.remove("btn-inactive");
-    regBtn.previousElementSibling.classList.remove("btn-active");
-    container.style.setProperty("--locus", "9rem");
+    if(index == 2){
+        container.style.setProperty("--locus", "8rem");
+        before.style.borderTopLeftRadius = "0rem";
+        before.style.borderTopRightRadius = "0rem";
+        cont_one.style.marginLeft = "-25rem";
+        cont_one.style.transition = "0.75s";   
+    }
 }

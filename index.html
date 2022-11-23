@@ -3,8 +3,8 @@
 		<title>web</title>
 		<script src="js/script.js"></script>
 		<link rel="stylesheet" href="css/styles.css">
-		<link rel="stylesheet" href="css/login.css">
-		<link rel="stylesheet" href="css/register.css">
+		<link rel="stylesheet" href="css/step1.css">
+		<link rel="stylesheet" href="css/step2.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css" integrity="sha512-giQeaPns4lQTBMRpOOHsYnGw1tGVzbAIHUyHRgn7+6FmiEgGGjaG0T2LZJmAPMzRCl+Cug0ItQ2xDZpTmEc+CQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,42 +12,41 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
 	</head>
 	<body>
+		<div class="btn-container" id="btn-container">
+			<button class="before" id="before"></button>
+			<button class="btn-active" onclick="back(1)">Step 1</button>
+			<button class="btn-inactive" onclick="back(2)">Step 2</button>
+			<button class="btn-inactive" onclick="next(2)">Step 3</button>
+		</div>
 		<div class="container">	
-			<div class="btn-container">
-				<button class="btn-active" onclick="login(this)">Log In</button>
-				<button class="btn-inactive" onclick="register(this)">Register</button>
-			</div>
-			<div class="icon-container">
-				<a href="https://www.fb.com/" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a href="https://www.google.com/" target="_blank"><i class="fa fa-google"></i></a>
-			</div>
 			<div class="slide-container" id="slide-container">
 			<div class="container-one" id="container-one">
-				<input class="username" placeholder="User Name" type="text">
-				<input class="password" placeholder="Enter place holder" type="password">
-				<div class="checker-container">
-					<label class="checker-label">
-						<input class="checker-box" type="checkbox">
-						<span class="new-check"></span>
-						<span class="newer-check"><i class="fa fa-check-square fa-lg"></i></span>
-						<span class="text">Remember password</span>
-					</label>
-				</div>
-				<button class="login">Log in</button>
+				<h1>Create account</h1>
+				<input class="input" placeholder="Email" type="email">
+				<input class="input" placeholder="Password" type="password">
+				<input class="input" placeholder="Confirm Password" type="password">
+				<button onclick="next(1)" class="next">Next</button>
 			</div>
 			<div class="container-two" id="container-two">
-				<input class="username" placeholder="User Name" type="text">
-				<input class="email" placeholder="Email ID" type="email">
-				<input class="password" placeholder="Enter Password" type="password">
-				<label class="checker-label">
-					<input class="checker-box" type="checkbox">
-					<span class="new-check"></span>
-					<span class="newer-check"><i class="fa fa-check-circle fa-lg"></i></span>
-					<span class="text">I agree to the <a href="https://termify.io/terms-and-conditions-generator?gclid=Cj0KCQiAveebBhD_ARIsAFaAvrH7T7_BdTAbGrFJVSkbNi4sWZvZGzjY231b3DDSpCNoxDasAKN_mGAaAtHTEALw_wcB"  target="_blank">terms & conditions</a>.</span>
-				</label>
-				<button class="register">Register</button>
-			</div>		
+				<h1>Social Links</h1>
+				<input class="input" placeholder="Medium" type="text">
+				<input class="input" placeholder="Github" type="text">
+				<input class="input" placeholder="Linkedin" type="text">
+				<div class="backnforth">
+					<button onclick="back(1)" class="back">Back</button>
+					<button onclick="next(2)" class="next">Next</button>
+				</div>
+			</div>	
+			<div class="container-three" id="container-three">
+				<h1>Personal info</h1>
+				<input class="input" placeholder="First Name" type="text">
+				<input class="input" placeholder="Last Name" type="text">
+				<input class="input" placeholder="Mobile Number" type="text">
+				<div class="backnforth">
+					<button onclick="back(2)" class="back">Back</button>
+					<button onclick="next(3)" class="next">Finish</button>
+				</div>
+			</div>	
 			</div>
 			</div>
 	</body>

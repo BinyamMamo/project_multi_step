@@ -1,0 +1,8 @@
+.backnforth{
+    display: flex;
+    justify-content:space-around;
+}
+
+.backnforth button{
+    display: block;
+}
