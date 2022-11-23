@@ -4,7 +4,7 @@
 }
 
 body{
-  background-image: url("../img/bg.jpg");
+  /* background-image: url("../img/bg.jpg"); */
   /* background-color: #7777ff; */
   background-size: cover;
   background-position: center;
@@ -73,16 +73,16 @@ body{
 
 .btn-container .before{
   border: none;
-  transition: 0.75s;
-
-  clip
+  transition: all 1s ease;
+  clip-path: content-box;
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
   /* content: ""; */
   position: absolute;
   z-index: 0;
   margin-left: var(--locus);
   margin-top: 0rem;
   /* top: -0.25rem; */
-  width: 8rem;
+  width: 9rem;
   
   /* display: block; */
   border-top-left-radius: 0.4rem;
