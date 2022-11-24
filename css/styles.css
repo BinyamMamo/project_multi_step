@@ -4,7 +4,7 @@
 }
 
 body{
-  /* background-image: url("../img/bg.jpg"); */
+  background-image: linear-gradient(rgba(30,30,30,0.5),rgba(30,30,30,0.5)), url("../img/bg.jpg");
   /* background-color: #7777ff; */
   background-size: cover;
   background-position: center;
@@ -74,9 +74,8 @@ body{
 .btn-container .before{
   border: none;
   transition: all 1s ease;
-  clip-path: content-box;
   clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-  /* content: ""; */
+  content: "";
   position: absolute;
   z-index: 0;
   margin-left: var(--locus);
